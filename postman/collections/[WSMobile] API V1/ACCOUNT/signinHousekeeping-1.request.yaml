@@ -1,0 +1,26 @@
+$kind: http-request
+name: signinHousekeeping
+url: "{{baseURL}}/absensiv2.2/tunas/rental/account/signinHousekeeping/"
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: username
+      value: TEST1234
+    - type: text
+      key: password
+      value: password
+settings:
+  strictSSL: false
+order: 9000

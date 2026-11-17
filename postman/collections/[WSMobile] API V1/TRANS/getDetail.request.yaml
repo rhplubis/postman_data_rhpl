@@ -1,0 +1,28 @@
+$kind: http-request
+url: "{{baseURL}}/absensiv2.2/tunas/rental/trans/getDetail/"
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: token
+      value: "17796811526302457"
+    - type: text
+      key: username
+      value: TESTHK
+    - type: text
+      key: status_absen
+      value: "1"
+settings:
+  strictSSL: false
+order: 5000

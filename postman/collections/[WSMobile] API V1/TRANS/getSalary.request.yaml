@@ -1,0 +1,31 @@
+$kind: http-request
+url: "{{baseURL}}/absensiv2.2/tunas/rental/trans/getSalary/"
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: token
+      value: "17531549864830450"
+    - type: text
+      key: driver_id
+      value: MDV1301180
+    - type: text
+      key: year
+      value: "2025"
+    - type: text
+      key: month
+      value: "06"
+settings:
+  strictSSL: false
+order: 10000

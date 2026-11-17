@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{baseURL}}/absensiv2.2/tunas/rental/trans/ListMasterCheckListType/"
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: token
+      value: "17754631656629859"
+settings:
+  strictSSL: false
+order: 20000

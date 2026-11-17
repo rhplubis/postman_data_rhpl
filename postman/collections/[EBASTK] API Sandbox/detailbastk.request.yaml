@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/trans/detailbastk"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: parent_status
+      value: "1"
+    - type: text
+      key: username
+      value: dispatcher
+    - type: text
+      key: token
+      value: "17710826703989981"
+    - type: text
+      key: nopol
+      value: BG-1610-ES
+order: 12000

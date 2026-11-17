@@ -2,6 +2,16 @@
 workspace:
   id: c3bec870-4aef-4bf2-942b-01ebfdb0f97a
 
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../postman/collections/[Tsmart] Driver API: 1d0c118d-55e1-40a6-8429-302144852c7e
+    ../postman/collections/[EBASTK] API Sandbox: 98f19349-a5ca-4b7c-bfa5-86bca3ca003c
+    ../postman/collections/[SHOTT] API: fec1a58c-6d99-4337-bd21-4e3a49abc366
+    ../postman/collections/[WSMobile] API V2 Modify Flow: 7c3e1976-943f-4180-b410-26bad5ac1cd5
+    ../postman/collections/[WSMobile] API V1: e3d9f808-acfd-4d89-b7d2-f424744a69b9
+
 # All resources in the `postman/` folder are automatically registered in Local View.
 # Point to additional files outside the `postman/` folder to register them individually. Example:
 #localResources:

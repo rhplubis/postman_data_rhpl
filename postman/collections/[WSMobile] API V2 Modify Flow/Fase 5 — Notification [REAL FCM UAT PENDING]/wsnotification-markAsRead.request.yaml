@@ -1,0 +1,21 @@
+$kind: http-request
+name: wsnotification/markAsRead
+url: "{{base_url}}?uri=tunas/rental/wsnotification/markAsRead"
+method: POST
+headers:
+  X-Request-ID: "{{$guid}}"
+queryParams:
+  uri: tunas/rental/wsnotification/markAsRead
+body:
+  type: urlencoded
+  content:
+    ccode: "{{ccode}}"
+    appid: "{{appid}}"
+    token: "{{token}}"
+    request_id: "{{$guid}}"
+    notification_uuid: "{{notification_uuid}}"
+scripts:
+  - type: afterResponse
+    code: pm.test('HTTP response', () => pm.expect(pm.response.code).to.be.oneOf([200,400,401,403,404,422,429,500]));
+    language: text/javascript
+order: 3000

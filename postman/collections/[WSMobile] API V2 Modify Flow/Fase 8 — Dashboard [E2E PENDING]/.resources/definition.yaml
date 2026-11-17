@@ -1,0 +1,3 @@
+$kind: collection
+description: Read-only PIC/Korlap direct-worker monitoring.
+order: 7000

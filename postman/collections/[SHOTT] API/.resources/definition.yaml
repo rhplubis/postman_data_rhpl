@@ -1,0 +1,12 @@
+$kind: collection
+description: Collection sandbox SHOTT dari allowlist aktif. Semua business endpoint [COMPANY_007]ih CANDIDATE/UNVERIFIED. Isi variable lokal, review side effect, lalu jalankan request satu per satu. Jangan commit/export nilai credential atau PDP/PII.
+variables:
+  base_url: http://127.0.0.1:82
+  ccode: ""
+  appid: ""
+  device_id: ""
+  username: ""
+  password: ""
+  token: ""
+  user_id: ""
+  lang: id

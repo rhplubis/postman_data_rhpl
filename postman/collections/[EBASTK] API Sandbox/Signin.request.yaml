@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/account/signin/"
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: username
+      value: dispatcher
+    - type: text
+      key: password
+      value: password
+order: 1000

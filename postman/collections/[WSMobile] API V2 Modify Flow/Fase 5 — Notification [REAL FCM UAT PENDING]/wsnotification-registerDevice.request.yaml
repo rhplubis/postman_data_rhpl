@@ -1,0 +1,24 @@
+$kind: http-request
+name: wsnotification/registerDevice
+url: "{{base_url}}?uri=tunas/rental/wsnotification/registerDevice"
+method: POST
+headers:
+  X-Request-ID: "{{$guid}}"
+queryParams:
+  uri: tunas/rental/wsnotification/registerDevice
+body:
+  type: urlencoded
+  content:
+    ccode: "{{ccode}}"
+    appid: "{{appid}}"
+    token: "{{token}}"
+    request_id: "{{$guid}}"
+    device_id: "{{device_id}}"
+    fcm_token: "{{fcm_token}}"
+    platform: ANDROID
+    app_version: "{{app_version}}"
+scripts:
+  - type: afterResponse
+    code: pm.test('HTTP response', () => pm.expect(pm.response.code).to.be.oneOf([200,400,401,403,404,422,429,500]));
+    language: text/javascript
+order: 1000

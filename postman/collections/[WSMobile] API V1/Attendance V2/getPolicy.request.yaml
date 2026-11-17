@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{base_url}}/tunas/rental/wsattendance/getPolicy"
+method: POST
+body:
+  type: urlencoded
+  content:
+    ccode: "{{ccode}}"
+    appid: "{{appid}}"
+    token: "{{token}}"
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('code 200', () => pm.expect(pm.response.json().code).to.eql(200));
+      pm.test('policy data', () => pm.expect(pm.response.json().data).to.have.property('cutoff_date'));
+    language: text/javascript
+order: 1000

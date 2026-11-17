@@ -1,0 +1,31 @@
+$kind: http-request
+url: "{{base_url}}/tunas/rental/wsovertime/submitRequest"
+method: POST
+headers:
+  Content-Type: application/x-www-form-urlencoded
+body:
+  type: urlencoded
+  content:
+    ccode: "{{ccode}}"
+    appid: "{{appid}}"
+    token: "{{worker_token}}"
+    lang: id
+    request_id: "{{request_id}}"
+    overtime_uuid: "{{overtime_uuid}}"
+    row_version: "{{row_version}}"
+scripts:
+  - type: beforeRequest
+    code: "pm.variables.set('request_id', pm.variables.replaceIn('{{$guid}}')); "
+    language: text/javascript
+  - type: afterResponse
+    code: |-
+      pm.test('Response JSON', () => pm.response.to.be.json);
+      const r=pm.response.json();
+      pm.test('Has numeric code', () => pm.expect(r.code).to.be.a('number'));
+      if (r.code !== 200) console.warn('API error', r.code, r.message);
+      if (r.code === 200 && r.data) {
+        if (r.data.overtime_uuid) pm.collectionVariables.set('overtime_uuid', r.data.overtime_uuid);
+        if (r.data.row_version !== undefined) pm.collectionVariables.set('row_version', String(r.data.row_version));
+      }
+    language: text/javascript
+order: 6000

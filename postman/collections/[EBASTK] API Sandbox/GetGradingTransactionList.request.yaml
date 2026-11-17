@@ -1,0 +1,39 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/trans/GetGradingTransactionList"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: token
+      value: "17622378537317427"
+    - type: text
+      key: category
+      value: RD4
+      description: wajib ambil dari session
+    - type: text
+      key: pool_id
+      value: BKS
+      description: wajib ambil dari session
+    - type: text
+      key: nopol
+      value: ""
+      description: optional untuk search
+    - type: text
+      key: date_start
+      value: ""
+      description: optional untuk search
+    - type: text
+      key: date_end
+      value: ""
+      description: optional untuk search
+    - type: text
+      key: user_group_id
+      value: "1"
+order: 18000

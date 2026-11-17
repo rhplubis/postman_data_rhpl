@@ -1,0 +1,31 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/trans/ShowListApprovalUnitout"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: jenis_unit
+      value: SOLD
+    - type: text
+      key: status_approval
+      value: "0 "
+    - type: text
+      key: pool
+      value: BKS
+    - type: text
+      key: type
+      value: RODA 4
+    - type: text
+      key: username
+      value: dispatcher
+    - type: text
+      key: token
+      value: "17543859952070866"
+order: 4000

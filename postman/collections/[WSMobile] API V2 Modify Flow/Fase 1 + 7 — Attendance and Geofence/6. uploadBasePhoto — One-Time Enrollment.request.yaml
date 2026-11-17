@@ -1,0 +1,52 @@
+$kind: http-request
+description: Enrollment base photo satu kali. Otorisasi menggunakan session/token valid; tidak ada password/PIN/reauth tambahan. Jika ACTIVE sudah tersedia, endpoint menolak code 498. Initial enrollment langsung ACTIVE/APPROVED.
+url: "{{base_url}}/tunas/rental/wsattendance/uploadBasePhoto"
+method: POST
+headers:
+  - key: X-Request-ID
+    value: "{{request_id}}"
+    description: "Phase 01 correlation ID. Write endpoint: must equal body request_id."
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: "{{ccode}}"
+    - type: text
+      key: appid
+      value: "{{appid}}"
+    - type: text
+      key: token
+      value: "{{token}}"
+    - type: text
+      key: request_id
+      value: "{{base_photo_request_id}}"
+    - type: text
+      key: device_id
+      value: "{{device_id}}"
+    - type: text
+      key: reason
+      value: "{{base_photo_reason}}"
+    - type: file
+      key: photo
+      src:
+        - "{{base_photo_path}}"
+    - type: text
+      key: photo_sha256
+      value: "{{base_photo_sha256}}"
+scripts:
+  - type: beforeRequest
+    code: pm.collectionVariables.set('base_photo_request_id', pm.variables.replaceIn('{{$guid}}'));
+    language: text/javascript
+  - type: afterResponse
+    code: |-
+      const j = pm.response.json();
+      pm.test('code 200', () => pm.expect(j.code).to.eql(200));
+      pm.test('base photo ACTIVE', () => pm.expect(j.data.status).to.eql('ACTIVE'));
+      pm.test('auto approved', () => pm.expect(j.data.approval_status).to.eql('APPROVED'));
+      pm.test('version returned', () => pm.expect(j.data.version).to.be.above(0));
+      pm.test('CDN photo URL', () => pm.expect(j.data.photo_url).to.match(/^https:\/\//));
+      pm.test('checksum returned', () => pm.expect(j.data.photo_sha256).to.eql(pm.collectionVariables.get('base_photo_sha256')));
+      pm.collectionVariables.set('base_photo_version', String(j.data.version));
+    language: text/javascript
+order: 7000

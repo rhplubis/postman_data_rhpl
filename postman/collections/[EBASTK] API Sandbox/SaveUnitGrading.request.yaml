@@ -1,0 +1,847 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/trans/SaveUnitGrading"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: token
+      value: "17610280289145883"
+    - type: text
+      key: category
+      value: RD4
+    - type: text
+      key: unit_id
+      value: "277363"
+    - type: text
+      key: nopol
+      value: KT-1801-K
+    - type: text
+      key: username
+      value: dispathcer
+    - type: text
+      key: klasifikasi[1][133][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[1][133][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[1][133][nilai_bobot]
+      value: " 4.00"
+    - type: text
+      key: klasifikasi[1][133][keterangan]
+      value: " Kondisi CHASSIS Baik."
+    - type: text
+      key: klasifikasi[1][134][bobot]
+      value: " 10"
+    - type: text
+      key: klasifikasi[1][134][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[1][134][nilai_bobot]
+      value: " 9.00"
+    - type: text
+      key: klasifikasi[1][134][keterangan]
+      value: " Kondisi BAN DEPAN Sangat Baik."
+    - type: text
+      key: klasifikasi[1][135][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[1][135][nilai]
+      value: " 75"
+    - type: text
+      key: klasifikasi[1][135][nilai_bobot]
+      value: " 3.75"
+    - type: text
+      key: klasifikasi[1][135][keterangan]
+      value: " Kondisi VELG DEPAN Cukup Baik."
+    - type: text
+      key: klasifikasi[1][136][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[1][136][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[1][136][nilai_bobot]
+      value: " 4.25"
+    - type: text
+      key: klasifikasi[1][136][keterangan]
+      value: " Kondisi BAN BELAKANG Baik."
+    - type: text
+      key: klasifikasi[1][137][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[1][137][nilai]
+      value: " 70"
+    - type: text
+      key: klasifikasi[1][137][nilai_bobot]
+      value: " 3.50"
+    - type: text
+      key: klasifikasi[1][137][keterangan]
+      value: " Kondisi VELG BELAKANG Cukup."
+    - type: text
+      key: klasifikasi[1][138][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[1][138][nilai]
+      value: " 95"
+    - type: text
+      key: klasifikasi[1][138][nilai_bobot]
+      value: " 4.75"
+    - type: text
+      key: klasifikasi[1][138][keterangan]
+      value: " Kondisi BAN SEREP dan VELG Sangat Bagus."
+    - type: text
+      key: klasifikasi[1][139][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[1][139][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[1][139][nilai_bobot]
+      value: " 4.00"
+    - type: text
+      key: klasifikasi[1][139][keterangan]
+      value: " SISTEM STEERING Normal."
+    - type: text
+      key: klasifikasi[1][140][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[1][140][nilai]
+      value: " 75"
+    - type: text
+      key: klasifikasi[1][140][nilai_bobot]
+      value: " 3.75"
+    - type: text
+      key: klasifikasi[1][140][keterangan]
+      value: " SISTEM SUSPENSI Perlu Cek Rutin."
+    - type: text
+      key: klasifikasi[1][141][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[1][141][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[1][141][nilai_bobot]
+      value: " 4.25"
+    - type: text
+      key: klasifikasi[1][141][keterangan]
+      value: " SISTEM REM Baik."
+    - type: text
+      key: klasifikasi[1][142][bobot]
+      value: " 15"
+    - type: text
+      key: klasifikasi[1][142][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[1][142][nilai_bobot]
+      value: " 13.50"
+    - type: text
+      key: klasifikasi[1][142][keterangan]
+      value: " GEAR BOX (TRANSMISI) Sangat Baik."
+    - type: text
+      key: klasifikasi[1][143][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[1][143][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[1][143][nilai_bobot]
+      value: " 4.00"
+    - type: text
+      key: klasifikasi[1][143][keterangan]
+      value: " GARDAN Normal."
+    - type: text
+      key: klasifikasi[1][144][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[1][144][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[1][144][nilai_bobot]
+      value: " 4.25"
+    - type: text
+      key: klasifikasi[1][144][keterangan]
+      value: " KNALPOT Baik, tidak ada kebocoran."
+    - type: text
+      key: klasifikasi[1][145][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[1][145][nilai]
+      value: " 75"
+    - type: text
+      key: klasifikasi[1][145][nilai_bobot]
+      value: " 3.75"
+    - type: text
+      key: klasifikasi[1][145][keterangan]
+      value: " AS RODA DEPAN Cukup Baik."
+    - type: text
+      key: klasifikasi[1][146][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[1][146][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[1][146][nilai_bobot]
+      value: " 4.00"
+    - type: text
+      key: klasifikasi[1][146][keterangan]
+      value: " AS RODA BELAKANG Normal."
+    - type: text
+      key: klasifikasi[1][147][bobot]
+      value: " 15"
+    - type: text
+      key: klasifikasi[1][147][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[1][147][nilai_bobot]
+      value: " 13.50"
+    - type: text
+      key: klasifikasi[1][147][keterangan]
+      value: " PROPELLER SHAFT Sangat Baik."
+    - type: text
+      key: klasifikasi[2][148][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][148][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[2][148][nilai_bobot]
+      value: " 2.13"
+    - type: text
+      key: klasifikasi[2][148][keterangan]
+      value: " FENDER Kanan Kiri Baik."
+    - type: text
+      key: klasifikasi[2][149][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][149][nilai]
+      value: " 75"
+    - type: text
+      key: klasifikasi[2][149][nilai_bobot]
+      value: " 1.88"
+    - type: text
+      key: klasifikasi[2][149][keterangan]
+      value: " APPRON Ada sedikit lecet."
+    - type: text
+      key: klasifikasi[2][150][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][150][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[2][150][nilai_bobot]
+      value: " 2.25"
+    - type: text
+      key: klasifikasi[2][150][keterangan]
+      value: " BODY PANEL DEPAN / KAP MESIN Sangat Baik."
+    - type: text
+      key: klasifikasi[2][151][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][151][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[2][151][nilai_bobot]
+      value: " 2.00"
+    - type: text
+      key: klasifikasi[2][151][keterangan]
+      value: " BUMPER DEPAN Normal."
+    - type: text
+      key: klasifikasi[2][152][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][152][nilai]
+      value: " 95"
+    - type: text
+      key: klasifikasi[2][152][nilai_bobot]
+      value: " 2.38"
+    - type: text
+      key: klasifikasi[2][152][keterangan]
+      value: " KACA DEPAN Sangat Jelas."
+    - type: text
+      key: klasifikasi[2][153][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][153][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[2][153][nilai_bobot]
+      value: " 2.00"
+    - type: text
+      key: klasifikasi[2][153][keterangan]
+      value: " GRILL Bersih."
+    - type: text
+      key: klasifikasi[2][154][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][154][nilai]
+      value: " 75"
+    - type: text
+      key: klasifikasi[2][154][nilai_bobot]
+      value: " 1.88"
+    - type: text
+      key: klasifikasi[2][154][keterangan]
+      value: " WIPER SET Perlu diganti dalam 6 bulan."
+    - type: text
+      key: klasifikasi[2][155][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][155][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[2][155][nilai_bobot]
+      value: " 2.25"
+    - type: text
+      key: klasifikasi[2][155][keterangan]
+      value: " LAMPU DEPAN SET Berfungsi Normal."
+    - type: text
+      key: klasifikasi[2][156][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][156][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[2][156][nilai_bobot]
+      value: " 2.13"
+    - type: text
+      key: klasifikasi[2][156][keterangan]
+      value: " SPION SET Normal."
+    - type: text
+      key: klasifikasi[2][157][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][157][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[2][157][nilai_bobot]
+      value: " 2.25"
+    - type: text
+      key: klasifikasi[2][157][keterangan]
+      value: " DASH BOARD Sangat Baik."
+    - type: text
+      key: klasifikasi[2][158][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][158][nilai]
+      value: " 95"
+    - type: text
+      key: klasifikasi[2][158][nilai_bobot]
+      value: " 2.38"
+    - type: text
+      key: klasifikasi[2][158][keterangan]
+      value: " COMBINATION METER Berfungsi Jelas."
+    - type: text
+      key: klasifikasi[2][159][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][159][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[2][159][nilai_bobot]
+      value: " 2.00"
+    - type: text
+      key: klasifikasi[2][159][keterangan]
+      value: " COMBINATION SWITCH Normal."
+    - type: text
+      key: klasifikasi[2][160][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][160][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[2][160][nilai_bobot]
+      value: " 2.13"
+    - type: text
+      key: klasifikasi[2][160][keterangan]
+      value: " SISTEM AC Dingin."
+    - type: text
+      key: klasifikasi[2][161][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][161][nilai]
+      value: " 75"
+    - type: text
+      key: klasifikasi[2][161][nilai_bobot]
+      value: " 1.88"
+    - type: text
+      key: klasifikasi[2][161][keterangan]
+      value: " HEAD UNIT / AUDIO SET Perlu upgrade."
+    - type: text
+      key: klasifikasi[2][162][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][162][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[2][162][nilai_bobot]
+      value: " 2.25"
+    - type: text
+      key: klasifikasi[2][162][keterangan]
+      value: " KUNCI KONTAK SET Normal."
+    - type: text
+      key: klasifikasi[2][163][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][163][nilai]
+      value: " 95"
+    - type: text
+      key: klasifikasi[2][163][nilai_bobot]
+      value: " 2.38"
+    - type: text
+      key: klasifikasi[2][163][keterangan]
+      value: " AIRBAGS Status OK."
+    - type: text
+      key: klasifikasi[2][164][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][164][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[2][164][nilai_bobot]
+      value: " 2.00"
+    - type: text
+      key: klasifikasi[2][164][keterangan]
+      value: " HEADREST Normal."
+    - type: text
+      key: klasifikasi[2][165][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][165][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[2][165][nilai_bobot]
+      value: " 2.25"
+    - type: text
+      key: klasifikasi[2][165][keterangan]
+      value: " POWER WINDOW SET Berfungsi Lancar."
+    - type: text
+      key: klasifikasi[2][166][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][166][nilai]
+      value: " 95"
+    - type: text
+      key: klasifikasi[2][166][nilai_bobot]
+      value: " 2.38"
+    - type: text
+      key: klasifikasi[2][166][keterangan]
+      value: " SAFETY BELT Kondisi Sangat Baik."
+    - type: text
+      key: klasifikasi[2][167][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][167][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[2][167][nilai_bobot]
+      value: " 2.13"
+    - type: text
+      key: klasifikasi[2][167][keterangan]
+      value: " KACA PINTU BAGASI Normal."
+    - type: text
+      key: klasifikasi[2][168][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][168][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[2][168][nilai_bobot]
+      value: " 2.25"
+    - type: text
+      key: klasifikasi[2][168][keterangan]
+      value: " KACA PINTU DEPAN Normal."
+    - type: text
+      key: klasifikasi[2][169][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][169][nilai]
+      value: " 95"
+    - type: text
+      key: klasifikasi[2][169][nilai_bobot]
+      value: " 2.38"
+    - type: text
+      key: klasifikasi[2][169][keterangan]
+      value: " KACA PINTU BELAKANG Normal."
+    - type: text
+      key: klasifikasi[2][170][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][170][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[2][170][nilai_bobot]
+      value: " 2.00"
+    - type: text
+      key: klasifikasi[2][170][keterangan]
+      value: " PINTU DEPAN Normal."
+    - type: text
+      key: klasifikasi[2][171][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][171][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[2][171][nilai_bobot]
+      value: " 2.13"
+    - type: text
+      key: klasifikasi[2][171][keterangan]
+      value: " COVER PINTU DEPAN Normal."
+    - type: text
+      key: klasifikasi[2][172][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][172][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[2][172][nilai_bobot]
+      value: " 2.25"
+    - type: text
+      key: klasifikasi[2][172][keterangan]
+      value: " PINTU BELAKANG Normal."
+    - type: text
+      key: klasifikasi[2][173][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][173][nilai]
+      value: " 95"
+    - type: text
+      key: klasifikasi[2][173][nilai_bobot]
+      value: " 2.38"
+    - type: text
+      key: klasifikasi[2][173][keterangan]
+      value: " COVER PINTU BELAKANG Normal."
+    - type: text
+      key: klasifikasi[2][174][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][174][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[2][174][nilai_bobot]
+      value: " 2.00"
+    - type: text
+      key: klasifikasi[2][174][keterangan]
+      value: " JOK SEAT Normal."
+    - type: text
+      key: klasifikasi[2][175][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][175][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[2][175][nilai_bobot]
+      value: " 2.13"
+    - type: text
+      key: klasifikasi[2][175][keterangan]
+      value: " BODY BELAKANG KANAN Normal."
+    - type: text
+      key: klasifikasi[2][176][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][176][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[2][176][nilai_bobot]
+      value: " 2.25"
+    - type: text
+      key: klasifikasi[2][176][keterangan]
+      value: " BODY BELAKANG KIRI Normal."
+    - type: text
+      key: klasifikasi[2][177][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][177][nilai]
+      value: " 95"
+    - type: text
+      key: klasifikasi[2][177][nilai_bobot]
+      value: " 2.38"
+    - type: text
+      key: klasifikasi[2][177][keterangan]
+      value: " SPOILER BELAKANG Normal."
+    - type: text
+      key: klasifikasi[2][178][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][178][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[2][178][nilai_bobot]
+      value: " 2.00"
+    - type: text
+      key: klasifikasi[2][178][keterangan]
+      value: " SPARE WHEEL COVER Normal."
+    - type: text
+      key: klasifikasi[2][179][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][179][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[2][179][nilai_bobot]
+      value: " 2.13"
+    - type: text
+      key: klasifikasi[2][179][keterangan]
+      value: " LAMPU BELAKANG SET Normal."
+    - type: text
+      key: klasifikasi[2][180][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][180][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[2][180][nilai_bobot]
+      value: " 2.25"
+    - type: text
+      key: klasifikasi[2][180][keterangan]
+      value: " PINTU BAGASI Normal."
+    - type: text
+      key: klasifikasi[2][181][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][181][nilai]
+      value: " 95"
+    - type: text
+      key: klasifikasi[2][181][nilai_bobot]
+      value: " 2.38"
+    - type: text
+      key: klasifikasi[2][181][keterangan]
+      value: " COVER PINTU BAGASI Normal."
+    - type: text
+      key: klasifikasi[2][182][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][182][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[2][182][nilai_bobot]
+      value: " 2.00"
+    - type: text
+      key: klasifikasi[2][182][keterangan]
+      value: " PILAR A B C D Normal."
+    - type: text
+      key: klasifikasi[2][183][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][183][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[2][183][nilai_bobot]
+      value: " 2.13"
+    - type: text
+      key: klasifikasi[2][183][keterangan]
+      value: " FLOORING Bersih."
+    - type: text
+      key: klasifikasi[2][184][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][184][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[2][184][nilai_bobot]
+      value: " 2.25"
+    - type: text
+      key: klasifikasi[2][184][keterangan]
+      value: " BODY PLAFON Normal."
+    - type: text
+      key: klasifikasi[2][185][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][185][nilai]
+      value: " 95"
+    - type: text
+      key: klasifikasi[2][185][nilai_bobot]
+      value: " 2.38"
+    - type: text
+      key: klasifikasi[2][185][keterangan]
+      value: " SIDE FOOT STEP Normal."
+    - type: text
+      key: klasifikasi[2][186][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][186][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[2][186][nilai_bobot]
+      value: " 2.00"
+    - type: text
+      key: klasifikasi[2][186][keterangan]
+      value: " BUMPER BELAKANG Normal."
+    - type: text
+      key: klasifikasi[2][187][bobot]
+      value: " 2.5"
+    - type: text
+      key: klasifikasi[2][187][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[2][187][nilai_bobot]
+      value: " 2.13"
+    - type: text
+      key: klasifikasi[2][187][keterangan]
+      value: " SENSOR PARKING dan KAMERA Normal."
+    - type: text
+      key: klasifikasi[3][188][bobot]
+      value: " 10"
+    - type: text
+      key: klasifikasi[3][188][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[3][188][nilai_bobot]
+      value: " 9.00"
+    - type: text
+      key: klasifikasi[3][188][keterangan]
+      value: " Kondisi BLOK MESIN Sangat Baik."
+    - type: text
+      key: klasifikasi[3][189][bobot]
+      value: " 10"
+    - type: text
+      key: klasifikasi[3][189][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[3][189][nilai_bobot]
+      value: " 8.50"
+    - type: text
+      key: klasifikasi[3][189][keterangan]
+      value: " Kondisi MESIN Baik."
+    - type: text
+      key: klasifikasi[3][190][bobot]
+      value: " 10"
+    - type: text
+      key: klasifikasi[3][190][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[3][190][nilai_bobot]
+      value: " 8.00"
+    - type: text
+      key: klasifikasi[3][190][keterangan]
+      value: " SISTEM BAHAN BAKAR Normal."
+    - type: text
+      key: klasifikasi[3][191][bobot]
+      value: " 15"
+    - type: text
+      key: klasifikasi[3][191][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[3][191][nilai_bobot]
+      value: " 13.50"
+    - type: text
+      key: klasifikasi[3][191][keterangan]
+      value: " INJECTION (EFI) Sangat Baik."
+    - type: text
+      key: klasifikasi[3][192][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[3][192][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[3][192][nilai_bobot]
+      value: " 4.25"
+    - type: text
+      key: klasifikasi[3][192][keterangan]
+      value: " INJECTION PUMP (DIESEL) Baik."
+    - type: text
+      key: klasifikasi[3][193][bobot]
+      value: " 15"
+    - type: text
+      key: klasifikasi[3][193][nilai]
+      value: " 95"
+    - type: text
+      key: klasifikasi[3][193][nilai_bobot]
+      value: " 14.25"
+    - type: text
+      key: klasifikasi[3][193][keterangan]
+      value: " DINAMO STARTER Sangat Baik."
+    - type: text
+      key: klasifikasi[3][194][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[3][194][nilai]
+      value: " 70"
+    - type: text
+      key: klasifikasi[3][194][nilai_bobot]
+      value: " 3.50"
+    - type: text
+      key: klasifikasi[3][194][keterangan]
+      value: " ACCU Perlu Cek Ulang."
+    - type: text
+      key: klasifikasi[3][195][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[3][195][nilai]
+      value: " 80"
+    - type: text
+      key: klasifikasi[3][195][nilai_bobot]
+      value: " 4.00"
+    - type: text
+      key: klasifikasi[3][195][keterangan]
+      value: " ALTERNATOR Normal."
+    - type: text
+      key: klasifikasi[3][196][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[3][196][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[3][196][nilai_bobot]
+      value: " 4.25"
+    - type: text
+      key: klasifikasi[3][196][keterangan]
+      value: " RADIATOR + WATER PUMP Baik."
+    - type: text
+      key: klasifikasi[3][197][bobot]
+      value: " 15"
+    - type: text
+      key: klasifikasi[3][197][nilai]
+      value: " 90"
+    - type: text
+      key: klasifikasi[3][197][nilai_bobot]
+      value: " 13.50"
+    - type: text
+      key: klasifikasi[3][197][keterangan]
+      value: " TANGKI BAHAN BAKAR Sangat Baik."
+    - type: text
+      key: klasifikasi[3][198][bobot]
+      value: " 5"
+    - type: text
+      key: klasifikasi[3][198][nilai]
+      value: " 85"
+    - type: text
+      key: klasifikasi[3][198][nilai_bobot]
+      value: " 4.25"
+    - type: text
+      key: klasifikasi[3][198][keterangan]
+      value: " ECU (ELECTRONIC CONTROL UNIT) Normal."
+    - type: text
+      key: grade[1][total_nilai_bobot]
+      value: " 64.00"
+    - type: text
+      key: grade[1][grade_huruf]
+      value: " C"
+    - type: text
+      key: grade[1][total_nilai]
+      value: "87"
+    - type: text
+      key: grade[2][total_nilai_bobot]
+      value: " 42.50"
+    - type: text
+      key: grade[2][grade_huruf]
+      value: " D"
+    - type: text
+      key: grade[2][total_nilai]
+      value: "87"
+    - type: text
+      key: grade[3][total_nilai_bobot]
+      value: " 85.75"
+    - type: text
+      key: grade[3][grade_huruf]
+      value: " A"
+    - type: text
+      key: grade[3][total_nilai]
+      value: "87"
+order: 17000

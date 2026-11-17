@@ -1,0 +1,29 @@
+$kind: http-request
+description: |-
+  CANDIDATE/UNVERIFIED. Review business side effects before running. Mutation/upload risk: manual sandbox execution only.
+
+  Isi `ccode` dan `appid` dari collection variables. Gunakan data sandbox. Request mutation/upload harus dijalankan manual.
+url: "{{base_url}}/tunas/rental/trans/getStatusAccount"
+method: POST
+headers:
+  Accept: application/json
+body:
+  type: urlencoded
+  content:
+    - key: ccode
+      value: "{{ccode}}"
+      description: Wajib dari constructor controller; isi sebagai collection variable
+    - key: appid
+      value: "{{appid}}"
+      description: Wajib dari constructor controller; isi sebagai collection variable
+    - key: username
+      value: "{{username}}"
+      description: Required
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('HTTP bukan 500', function () { pm.expect(pm.response.code).not.to.eql(500); });
+      pm.test('Tidak ada stack trace PHP', function () { pm.expect(pm.response.text()).not.to.include('Stack trace:'); });
+      pm.test('Respons JSON untuk endpoint API', function () { pm.response.to.be.json; });
+    language: text/javascript
+order: 1000

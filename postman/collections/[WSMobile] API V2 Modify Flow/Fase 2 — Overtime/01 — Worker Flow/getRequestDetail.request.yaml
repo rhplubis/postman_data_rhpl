@@ -1,0 +1,27 @@
+$kind: http-request
+url: "{{base_url}}/tunas/rental/wsovertime/getRequestDetail"
+method: POST
+headers:
+  Content-Type: application/x-www-form-urlencoded
+body:
+  type: urlencoded
+  content:
+    ccode: "{{ccode}}"
+    appid: "{{appid}}"
+    token: "{{worker_token}}"
+    lang: id
+    overtime_uuid: "{{overtime_uuid}}"
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Response JSON', () => pm.response.to.be.json);
+      const r=pm.response.json();
+      pm.test('Has numeric code', () => pm.expect(r.code).to.be.a('number'));
+      if (r.code !== 200) console.warn('API error', r.code, r.message);
+      if (r.code === 200 && r.data) {
+        pm.collectionVariables.set('row_version', String(r.data.row_version));
+        if (r.data.attachments && r.data.attachments.length) pm.collectionVariables.set('attachment_id', r.data.attachments[0].attachment_id);
+        pm.test('Private ObjectURL hidden', () => pm.expect(JSON.stringify(r.data)).not.to.include('object_url'));
+      }
+    language: text/javascript
+order: 4000

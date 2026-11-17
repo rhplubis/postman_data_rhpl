@@ -1,0 +1,45 @@
+$kind: http-request
+url: "{{baseURL}}/absensiv2.2/tunas/rental/trans/addHeaderMonthly/"
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: token
+      value: "17755537247842552"
+    - type: text
+      key: checklist_type_id
+      value: "1"
+      description: mandatory
+    - type: text
+      key: checklist_type_name_snap
+      value: Ruangan
+    - type: text
+      key: periode_date
+      value: 2026-04-01
+      description: mandatory
+    - type: text
+      key: username
+      value: TESTHK
+      description: mandatory
+    - type: text
+      key: location_name_snap
+      value: Ruangan IT
+      description: mandatory
+    - type: text
+      key: approved_by_korlap
+      value: admin_korlap
+      description: korlap id dari session
+settings:
+  strictSSL: false
+order: 26000

@@ -1,0 +1,21 @@
+$kind: collection
+description: ""
+variables:
+  baseURL: http://localhost:81
+  base_url: ""
+  ccode: ""
+  appid: ""
+  date_from: ""
+  date_to: ""
+  attendance_key: ""
+  device_id: ""
+  app_version: ""
+  platform: ""
+  challenge_id: ""
+  nonce: ""
+  photo_sha256: ""
+  action: ""
+  latitude: ""
+  longitude: ""
+  gps_accuracy_m: ""
+  attempt_token: ""

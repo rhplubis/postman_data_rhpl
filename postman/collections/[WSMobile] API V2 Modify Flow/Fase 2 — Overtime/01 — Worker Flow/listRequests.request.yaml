@@ -1,0 +1,41 @@
+$kind: http-request
+url: "{{base_url}}/tunas/rental/wsovertime/listRequests"
+method: POST
+headers:
+  Content-Type: application/x-www-form-urlencoded
+body:
+  type: urlencoded
+  content:
+    - key: ccode
+      value: "{{ccode}}"
+    - key: appid
+      value: "{{appid}}"
+    - key: token
+      value: "{{worker_token}}"
+    - key: lang
+      value: id
+    - key: status
+      value: ""
+      disabled: true
+    - key: period
+      value: ""
+      disabled: true
+    - key: date_from
+      value: ""
+      disabled: true
+    - key: date_to
+      value: ""
+      disabled: true
+    - key: page
+      value: "1"
+    - key: page_size
+      value: "10"
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Response JSON', () => pm.response.to.be.json);
+      const r=pm.response.json();
+      pm.test('Has numeric code', () => pm.expect(r.code).to.be.a('number'));
+      if (r.code !== 200) console.warn('API error', r.code, r.message);
+    language: text/javascript
+order: 2000

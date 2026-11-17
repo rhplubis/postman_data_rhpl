@@ -1,0 +1,36 @@
+$kind: http-request
+url: "{{baseURL}}/absensiv2.2/tunas/rental/trans/addChecklistDaily/"
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: token
+      value: "17754631656629859"
+    - type: text
+      key: monthly_header_id
+      value: "1"
+      description: mandatory
+    - type: text
+      key: check_date
+      value: 2026-04-07
+      description: mandatory
+    - type: text
+      key: username
+      value: IOS123
+    - type: text
+      key: approved_by_pic
+      value: ""
+settings:
+  strictSSL: false
+order: 27000

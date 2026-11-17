@@ -1,0 +1,29 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/trans/ShowMasterKomponenBastkFoto"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: token
+      value: "17641421931761263"
+    - type: text
+      key: type_unit
+      value: RD4
+    - type: text
+      key: category_id
+      value: PASSENGER
+    - type: text
+      key: segment_id
+      value: SUV/MPV
+    - type: text
+      key: merk_type
+      value: CHER
+      disabled: true
+order: 35000

@@ -1,0 +1,60 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/trans/ShowListApprovalUnitout"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: token
+      value: "17575886411722404"
+    - type: text
+      key: username
+      value: admin
+    - type: text
+      key: parent_status
+      value: "6"
+      disabled: true
+    - type: text
+      key: type
+      value: RODA 4
+    - type: text
+      key: pool_id
+      value: BKS
+    - type: text
+      key: jenis_unit
+      value: UNSOLD
+    - type: text
+      key: nopol
+      value: DN-1464-UB
+      disabled: true
+    - type: text
+      key: foto_pos
+      value: "2"
+      disabled: true
+    - type: file
+      key: filename
+      src:
+        - /C:/Users/Administrator/Downloads/output-onlinepngtools.png
+      disabled: true
+    - type: text
+      key: apk
+      value: "1"
+      disabled: true
+    - type: text
+      key: police_no
+      value: F-1183-EQ
+      disabled: true
+    - type: text
+      key: status_unit
+      value: Tebus Debitur
+      disabled: true
+    - type: text
+      key: status_approval
+      value: "0"
+order: 2000

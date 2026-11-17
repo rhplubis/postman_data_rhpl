@@ -1,0 +1,121 @@
+$kind: http-request
+url: "{{base_url}}/tunas/rental/wsattendance/validateRecordTime"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: "{{ccode}}"
+    - type: text
+      key: appid
+      value: "{{appid}}"
+    - type: text
+      key: token
+      value: "{{token}}"
+    - type: text
+      key: request_id
+      value: "{{validate_request_id}}"
+    - type: text
+      key: device_id
+      value: "{{device_id}}"
+    - type: text
+      key: app_version
+      value: "{{app_version}}"
+    - type: text
+      key: platform
+      value: "{{platform}}"
+    - type: text
+      key: action
+      value: "{{action}}"
+    - type: text
+      key: challenge_id
+      value: "{{challenge_id}}"
+    - type: text
+      key: nonce
+      value: "{{nonce}}"
+    - type: file
+      key: photo
+      src:
+        - "{{photo_path}}"
+    - type: text
+      key: photo_sha256
+      value: "{{photo_sha256}}"
+    - type: text
+      key: latitude
+      value: "{{latitude}}"
+    - type: text
+      key: longitude
+      value: "{{longitude}}"
+    - type: text
+      key: gps_accuracy_m
+      value: "{{gps_accuracy_m}}"
+    - type: text
+      key: device_timestamp
+      value: "{{device_timestamp}}"
+    - type: text
+      key: is_rooted_or_jailbroken
+      value: "false"
+    - type: text
+      key: is_mock_location
+      value: "false"
+    - type: text
+      key: liveness_status
+      value: PASSED
+    - type: text
+      key: os_version
+      value: "{{os_version}}"
+    - type: text
+      key: device_model
+      value: "{{device_model}}"
+    - type: text
+      key: camera_position
+      value: "{{camera_position}}"
+    - type: text
+      key: timezone_offset_minutes
+      value: "{{timezone_offset_minutes}}"
+    - type: text
+      key: location_captured_at
+      value: "{{location_captured_at}}"
+    - type: text
+      key: location_provider
+      value: "{{location_provider}}"
+    - type: text
+      key: network_type
+      value: "{{network_type}}"
+    - type: text
+      key: integrity_token
+      value: "{{integrity_token}}"
+    - type: text
+      key: integrity_provider
+      value: "{{integrity_provider}}"
+    - type: text
+      key: challenge_actions
+      value: "{{challenge_actions}}"
+    - type: text
+      key: challenge_started_at
+      value: "{{challenge_started_at}}"
+    - type: text
+      key: challenge_completed_at
+      value: "{{challenge_completed_at}}"
+    - type: text
+      key: liveness_reason_code
+      value: "{{liveness_reason_code}}"
+scripts:
+  - type: beforeRequest
+    code: |-
+      pm.variables.set('validate_request_id', pm.variables.replaceIn('{{$guid}}'));
+      pm.variables.set('device_timestamp', new Date().toISOString());
+      pm.variables.set('location_captured_at', new Date().toISOString());
+      pm.variables.set('challenge_started_at', new Date(Date.now()-3000).toISOString());
+      pm.variables.set('challenge_completed_at', new Date().toISOString());
+    language: text/javascript
+  - type: afterResponse
+    code: |-
+      const j=pm.response.json();
+      pm.test('code 200',()=>pm.expect(j.code).to.eql(200));
+      pm.test('server face inference',()=>pm.expect(j.data.validation.face.decision_source).to.eql('FACE_INFERENCE_SERVICE'));
+      pm.test('face passed',()=>pm.expect(j.data.validation.face.status).to.eql('PASSED'));
+      pm.collectionVariables.set('attempt_token',j.data.attempt_token);
+    language: text/javascript
+order: 8000

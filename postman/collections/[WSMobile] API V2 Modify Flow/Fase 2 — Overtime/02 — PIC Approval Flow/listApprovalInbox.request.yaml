@@ -1,0 +1,44 @@
+$kind: http-request
+url: "{{base_url}}/tunas/rental/wsovertime/listApprovalInbox"
+method: POST
+headers:
+  Content-Type: application/x-www-form-urlencoded
+body:
+  type: urlencoded
+  content:
+    - key: ccode
+      value: "{{ccode}}"
+    - key: appid
+      value: "{{appid}}"
+    - key: token
+      value: "{{pic_token}}"
+    - key: lang
+      value: id
+    - key: status
+      value: WAITING_APPROVAL
+    - key: customer_id
+      value: ""
+      disabled: true
+    - key: site_id
+      value: ""
+      disabled: true
+    - key: date_from
+      value: ""
+      disabled: true
+    - key: date_to
+      value: ""
+      disabled: true
+    - key: page
+      value: "1"
+    - key: page_size
+      value: "10"
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Response JSON', () => pm.response.to.be.json);
+      const r=pm.response.json();
+      pm.test('Has numeric code', () => pm.expect(r.code).to.be.a('number'));
+      if (r.code !== 200) console.warn('API error', r.code, r.message);
+      if(r.code===200 && r.data.items && r.data.items.length){pm.collectionVariables.set('approval_overtime_uuid',r.data.items[0].overtime_uuid);pm.collectionVariables.set('approval_row_version',String(r.data.items[0].row_version));}
+    language: text/javascript
+order: 1000

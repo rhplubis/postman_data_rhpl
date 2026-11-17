@@ -1,0 +1,37 @@
+$kind: http-request
+description: "KANDIDAT STATIS; belum dikonfirmasi sebagai route client atau verb. POST/form hanya hipotesis dari parser. Jangan jalankan sampai sandbox_host, izin, fixture sintetis dan rollback disetujui. Side effect: potensial DB/session/storage/integrasi; wajib driver_allow_mutation=YES. Field mandatory menurut source: appid, orderid1. Jangan simpan token/PIN/data nyata dalam collection, environment export, history, atau dokumen."
+url: "{{base_url}}/tunas/rental/trans/plotingShuttle"
+method: POST
+body:
+  type: urlencoded
+  content:
+    - key: appid
+      value: "{{appid}}"
+    - key: ccode
+      value: "{{ccode}}"
+    - key: lang
+      value: "{{lang}}"
+      disabled: true
+    - key: orderid1
+      value: "{{orderid1}}"
+    - key: orderid2
+      value: "{{orderid2}}"
+      disabled: true
+    - key: orderid3
+      value: "{{orderid3}}"
+      disabled: true
+    - key: orderid4
+      value: "{{orderid4}}"
+      disabled: true
+    - key: orderid5
+      value: "{{orderid5}}"
+      disabled: true
+    - key: orderid6
+      value: "{{orderid6}}"
+      disabled: true
+    - key: orderid7
+      value: "{{orderid7}}"
+      disabled: true
+    - key: token
+      value: "{{token}}"
+order: 33000

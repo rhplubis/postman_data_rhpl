@@ -1,0 +1,106 @@
+$kind: http-request
+description: |-
+  CANDIDATE/UNVERIFIED. Review business side effects before running. Mutation/upload risk: manual sandbox execution only.
+
+  Isi `ccode` dan `appid` dari collection variables. Gunakan data sandbox. Request mutation/upload harus dijalankan manual.
+url: "{{base_url}}/tunas/rental/trans/CRPKS"
+method: POST
+headers:
+  Accept: application/json
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: "{{ccode}}"
+      description: Wajib dari constructor controller; isi sebagai collection variable
+    - type: text
+      key: appid
+      value: "{{appid}}"
+      description: Wajib dari constructor controller; isi sebagai collection variable
+    - type: text
+      key: id_summary
+      value: ""
+      description: Required
+    - type: text
+      key: username
+      value: "{{username}}"
+      description: Required
+    - type: text
+      key: phone_number
+      value: ""
+      description: Optional/unverified
+      disabled: true
+    - type: text
+      key: fullname
+      value: ""
+      description: Required
+    - type: text
+      key: email
+      value: ""
+      description: Required
+    - type: text
+      key: address
+      value: ""
+      description: Required
+    - type: text
+      key: no_npwp
+      value: ""
+      description: Required
+    - type: text
+      key: no_ktp
+      value: ""
+      description: Required
+    - type: text
+      key: no_phone
+      value: ""
+      description: Optional/unverified
+      disabled: true
+    - type: text
+      key: company
+      value: ""
+      description: Required
+    - type: text
+      key: nip
+      value: ""
+      description: Optional/unverified
+      disabled: true
+    - type: text
+      key: type_account
+      value: ""
+      description: Required
+    - type: text
+      key: type
+      value: ""
+      description: Optional/unverified
+      disabled: true
+    - type: text
+      key: total_price
+      value: ""
+      description: Required
+    - type: text
+      key: selected_bank
+      value: ""
+      description: Required
+    - type: text
+      key: biaya_layanan
+      value: ""
+      description: Optional/unverified
+      disabled: true
+    - type: text
+      key: alasan
+      value: ""
+      description: Optional/unverified
+      disabled: true
+    - type: file
+      key: image_profile_value
+      src: []
+      description: Sandbox fixture only
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('HTTP bukan 500', function () { pm.expect(pm.response.code).not.to.eql(500); });
+      pm.test('Tidak ada stack trace PHP', function () { pm.expect(pm.response.text()).not.to.include('Stack trace:'); });
+      pm.test('Respons JSON untuk endpoint API', function () { pm.response.to.be.json; });
+    language: text/javascript
+order: 37000

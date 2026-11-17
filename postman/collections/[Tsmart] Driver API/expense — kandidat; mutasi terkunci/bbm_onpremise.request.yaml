@@ -1,0 +1,60 @@
+$kind: http-request
+description: "KANDIDAT STATIS; belum dikonfirmasi sebagai route client atau verb. POST/form hanya hipotesis dari parser. Jangan jalankan sampai sandbox_host, izin, fixture sintetis dan rollback disetujui. Side effect: potensial DB/session/storage/integrasi; wajib driver_allow_mutation=YES. Field mandatory menurut source: appid, driver_id, km_isi, liter_isi, nama_spbu, rupiah, time. Jangan simpan token/PIN/data nyata dalam collection, environment export, history, atau dokumen."
+url: "{{base_url}}/tunas/rental/expense/bbm_onpremise"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "{{appid}}"
+    - type: text
+      key: ccode
+      value: "{{ccode}}"
+    - type: text
+      key: driver_id
+      value: "{{driver_id}}"
+    - type: text
+      key: km_isi
+      value: "{{km_isi}}"
+    - type: text
+      key: lang
+      value: "{{lang}}"
+      disabled: true
+    - type: text
+      key: lattitude
+      value: "{{lattitude}}"
+      disabled: true
+    - type: text
+      key: liter_isi
+      value: "{{liter_isi}}"
+    - type: text
+      key: location
+      value: "{{location}}"
+      disabled: true
+    - type: text
+      key: longitude
+      value: "{{longitude}}"
+      disabled: true
+    - type: text
+      key: nama_spbu
+      value: "{{nama_spbu}}"
+    - type: text
+      key: payment_tipe
+      value: "{{payment_tipe}}"
+      disabled: true
+    - type: text
+      key: rupiah
+      value: "{{rupiah}}"
+    - type: text
+      key: time
+      value: "{{time}}"
+    - type: text
+      key: token
+      value: "{{token}}"
+    - type: file
+      key: file_name
+      src:
+        - ""
+      disabled: true
+order: 3000

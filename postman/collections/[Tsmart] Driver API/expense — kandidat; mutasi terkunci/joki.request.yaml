@@ -1,0 +1,34 @@
+$kind: http-request
+description: "KANDIDAT STATIS; belum dikonfirmasi sebagai route client atau verb. POST/form hanya hipotesis dari parser. Jangan jalankan sampai sandbox_host, izin, fixture sintetis dan rollback disetujui. Side effect: potensial DB/session/storage/integrasi; wajib driver_allow_mutation=YES. Field mandatory menurut source: appid, id_driver, id_order, time, total_joki. Jangan simpan token/PIN/data nyata dalam collection, environment export, history, atau dokumen."
+url: "{{base_url}}/tunas/rental/expense/joki"
+method: POST
+body:
+  type: urlencoded
+  content:
+    - key: appid
+      value: "{{appid}}"
+    - key: ccode
+      value: "{{ccode}}"
+    - key: id_driver
+      value: "{{driver_id}}"
+    - key: id_order
+      value: "{{id_order}}"
+    - key: lang
+      value: "{{lang}}"
+      disabled: true
+    - key: latitude
+      value: "{{latitude}}"
+      disabled: true
+    - key: location
+      value: "{{location}}"
+      disabled: true
+    - key: longitude
+      value: "{{longitude}}"
+      disabled: true
+    - key: time
+      value: "{{time}}"
+    - key: token
+      value: "{{token}}"
+    - key: total_joki
+      value: "{{total_joki}}"
+order: 6000

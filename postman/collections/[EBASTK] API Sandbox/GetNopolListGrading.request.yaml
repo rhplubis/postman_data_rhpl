@@ -1,0 +1,27 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/trans/GetNopolListGrading"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: token
+      value: "17621571987614157"
+    - type: text
+      key: nopol
+      value: "1615"
+      description: wajib
+    - type: text
+      key: category
+      value: RD4
+      description: wajib
+    - type: text
+      key: user_group_id
+      value: "1"
+order: 20000

@@ -1,0 +1,30 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/trans/test"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: token
+      value: "17575629069582535"
+    - type: text
+      key: username
+      value: dispatcher
+    - type: text
+      key: nopol
+      value: UAT-0022-MOBIL
+    - type: text
+      key: pool
+      value: BKS
+      disabled: true
+    - type: text
+      key: vhc_cat_name
+      value: MBL
+      disabled: true
+order: 9000

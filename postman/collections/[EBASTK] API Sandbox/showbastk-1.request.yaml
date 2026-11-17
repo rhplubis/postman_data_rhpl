@@ -1,0 +1,33 @@
+$kind: http-request
+name: showbastk
+url: http://localhost:81/mas-auction-ebastk-api/tunas/rental/trans/showbastk
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: token
+      value: "17667393907087398"
+    - type: text
+      key: username
+      value: mobilisasi
+    - type: text
+      key: type
+      value: RODA 4
+    - type: text
+      key: pool
+      value: BKS
+    - type: text
+      key: jenis_unit
+      value: SOLD
+      disabled: true
+    - type: text
+      key: parent_status
+      value: "5"
+order: 41000

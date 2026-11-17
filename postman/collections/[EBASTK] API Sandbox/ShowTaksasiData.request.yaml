@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/trans/ShowTaksasiData"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: token
+      value: "17617320462216411"
+    - type: text
+      key: transaction_id
+      value: "10"
+order: 24000

@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{base_url}}/tunas/rental/wsattendance/getAttendanceDetail"
+method: POST
+body:
+  type: urlencoded
+  content:
+    ccode: "{{ccode}}"
+    appid: "{{appid}}"
+    token: "{{token}}"
+    attendance_key: INVALID
+scripts:
+  - type: afterResponse
+    code: pm.test('failure code',()=>pm.expect(pm.response.json().code).not.eql(200));
+    language: text/javascript
+order: 5000

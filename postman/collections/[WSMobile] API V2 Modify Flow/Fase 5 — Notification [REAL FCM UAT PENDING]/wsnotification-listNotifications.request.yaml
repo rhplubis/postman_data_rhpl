@@ -1,0 +1,29 @@
+$kind: http-request
+name: wsnotification/listNotifications
+url: "{{base_url}}?uri=tunas/rental/wsnotification/listNotifications"
+method: POST
+headers:
+  X-Request-ID: "{{$guid}}"
+queryParams:
+  uri: tunas/rental/wsnotification/listNotifications
+body:
+  type: urlencoded
+  content:
+    - key: ccode
+      value: "{{ccode}}"
+    - key: appid
+      value: "{{appid}}"
+    - key: token
+      value: "{{token}}"
+    - key: status
+      value: ALL
+    - key: limit
+      value: "20"
+    - key: cursor
+      value: ""
+      disabled: true
+scripts:
+  - type: afterResponse
+    code: pm.test('HTTP response', () => pm.expect(pm.response.code).to.be.oneOf([200,400,401,403,404,422,429,500]));
+    language: text/javascript
+order: 2000

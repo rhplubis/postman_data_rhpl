@@ -1,0 +1,64 @@
+$kind: http-request
+description: |-
+  CANDIDATE/UNVERIFIED. Review business side effects before running. Mutation/upload risk: manual sandbox execution only.
+
+  Isi `ccode` dan `appid` dari collection variables. Gunakan data sandbox. Request mutation/upload harus dijalankan manual.
+url: "{{base_url}}/tunas/rental/account/registerCorporate"
+method: POST
+headers:
+  Accept: application/json
+body:
+  type: urlencoded
+  content:
+    - key: ccode
+      value: "{{ccode}}"
+      description: Wajib dari constructor controller; isi sebagai collection variable
+    - key: appid
+      value: "{{appid}}"
+      description: Wajib dari constructor controller; isi sebagai collection variable
+    - key: token_register
+      value: ""
+      description: Required
+    - key: register_type
+      value: ""
+      description: Required
+    - key: company_name
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: pic_name
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: pic_phone_number
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: pic_email
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: tell_us_what_you_need
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: mo_number
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: created_by
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: device_id
+      value: "{{device_id}}"
+      disabled: true
+      description: Optional/unverified
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('HTTP bukan 500', function () { pm.expect(pm.response.code).not.to.eql(500); });
+      pm.test('Tidak ada stack trace PHP', function () { pm.expect(pm.response.text()).not.to.include('Stack trace:'); });
+      pm.test('Respons JSON untuk endpoint API', function () { pm.response.to.be.json; });
+    language: text/javascript
+order: 6000

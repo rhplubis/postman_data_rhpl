@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/trans/MasterAssetCategory"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: token
+      value: "17631134971921855"
+    - type: text
+      key: vendor_name
+      value: mandi
+      disabled: true
+order: 29000

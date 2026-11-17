@@ -1,0 +1,38 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/trans/detailbastkapproval"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: jenis_unit
+      value: "UNSOLD "
+      disabled: true
+    - type: text
+      key: status_approval
+      value: "0 "
+      disabled: true
+    - type: text
+      key: pool_id
+      value: BKS
+      disabled: true
+    - type: text
+      key: type
+      value: RODA 4
+      disabled: true
+    - type: text
+      key: username
+      value: dispatcher
+    - type: text
+      key: token
+      value: "17579199129967267"
+    - type: text
+      key: nopol
+      value: B-8152-EQ
+order: 5000

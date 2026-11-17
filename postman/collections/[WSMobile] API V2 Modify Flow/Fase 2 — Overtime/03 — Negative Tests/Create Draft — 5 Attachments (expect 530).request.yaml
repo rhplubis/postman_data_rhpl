@@ -1,0 +1,71 @@
+$kind: http-request
+url: "{{base_url}}/tunas/rental/wsovertime/Create Draft — 5 Attachments (expect 530)"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: "{{ccode}}"
+    - type: text
+      key: appid
+      value: "{{appid}}"
+    - type: text
+      key: token
+      value: "{{worker_token}}"
+    - type: text
+      key: lang
+      value: id
+    - type: text
+      key: request_id
+      value: "{{request_id}}"
+    - type: text
+      key: overtime_date
+      value: "{{overtime_date}}"
+    - type: text
+      key: start_at
+      value: "{{start_at}}"
+    - type: text
+      key: end_at
+      value: "{{end_at}}"
+    - type: text
+      key: reason
+      value: "{{reason}}"
+    - type: file
+      key: attachments[]
+      src:
+        - ""
+      disabled: true
+    - type: file
+      key: attachments[]
+      src:
+        - ""
+      disabled: true
+    - type: file
+      key: attachments[]
+      src:
+        - ""
+      disabled: true
+    - type: file
+      key: attachments[]
+      src:
+        - ""
+      disabled: true
+    - type: file
+      key: attachments[]
+      src:
+        - ""
+      disabled: true
+scripts:
+  - type: beforeRequest
+    code: "pm.variables.set('request_id', pm.variables.replaceIn('{{$guid}}')); "
+    language: text/javascript
+  - type: afterResponse
+    code: |-
+      pm.test('Response JSON', () => pm.response.to.be.json);
+      const r=pm.response.json();
+      pm.test('Has numeric code', () => pm.expect(r.code).to.be.a('number'));
+      if (r.code !== 200) console.warn('API error', r.code, r.message);
+      pm.test('Expected 530 when files enabled',()=>{if(r.code!==200)pm.expect(r.code).to.eql(530);});
+    language: text/javascript
+order: 1000

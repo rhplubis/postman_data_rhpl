@@ -1,0 +1,33 @@
+$kind: http-request
+url: "{{base_url}}/tunas/rental/wsattendance/createVerificationChallenge"
+method: POST
+headers:
+  - key: X-Request-ID
+    value: "{{request_id}}"
+    description: "Phase 01 correlation ID. Write endpoint: must equal body request_id."
+body:
+  type: urlencoded
+  content:
+    ccode: "{{ccode}}"
+    appid: "{{appid}}"
+    token: "{{token}}"
+    request_id: "{{request_id}}"
+    device_id: "{{device_id}}"
+    app_version: "{{app_version}}"
+    platform: "{{platform}}"
+    action: "{{action}}"
+scripts:
+  - type: beforeRequest
+    code: "pm.variables.set('request_id', pm.variables.replaceIn('{{$guid}}')); "
+    language: text/javascript
+  - type: afterResponse
+    code: |-
+      const j=pm.response.json();
+      pm.test('code 200',()=>pm.expect(j.code).to.eql(200));
+      pm.test('challenge UUID',()=>pm.expect(j.data.challenge_id).to.match(/^[0-9a-f-]{36}$/));
+      pm.test('nonce returned',()=>pm.expect(j.data.nonce).to.be.a('string').and.not.empty);
+      pm.collectionVariables.set('challenge_id',j.data.challenge_id);
+      pm.collectionVariables.set('nonce',j.data.nonce);
+      pm.collectionVariables.set('challenge_actions',JSON.stringify(j.data.actions));
+    language: text/javascript
+order: 6000

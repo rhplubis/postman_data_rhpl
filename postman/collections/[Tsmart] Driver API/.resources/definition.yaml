@@ -1,0 +1,20 @@
+$kind: collection
+description: 59 kandidat statis, bukan 59 endpoint aktif. Semua request fail-closed hingga environment sandbox privat dan izin eksplisit disetel. Tidak berisi kredensial/fixture/hasil UAT. Fase 9 NOT RUN / produksi NO-GO.
+variables:
+  base_url: ""
+  sandbox_host: ""
+  driver_allow_run: NO
+  driver_allow_candidate: NO
+  driver_allow_mutation: NO
+  approved_request: ""
+  appid: ""
+  ccode: ""
+  pin: ""
+  km: ""
+  timelogin: ""
+  timelogout: ""
+  driver_id: ""
+  driver_name: ""
+  driver_phone: ""
+  startdate: ""
+  enddate: ""

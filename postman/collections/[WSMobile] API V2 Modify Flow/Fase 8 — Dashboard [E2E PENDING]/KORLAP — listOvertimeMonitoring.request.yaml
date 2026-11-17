@@ -1,0 +1,34 @@
+$kind: http-request
+url: "{{base_url}}?uri=tunas/rental/wsdashboard/listOvertimeMonitoring"
+method: POST
+headers:
+  X-Request-ID: "{{$guid}}"
+queryParams:
+  uri: tunas/rental/wsdashboard/listOvertimeMonitoring
+body:
+  type: urlencoded
+  content:
+    - key: ccode
+      value: "{{ccode}}"
+    - key: appid
+      value: "{{appid}}"
+    - key: token
+      value: "{{korlap_token}}"
+    - key: date_from
+      value: "{{date_from}}"
+    - key: date_to
+      value: "{{date_to}}"
+    - key: status
+      value: WAITING_APPROVAL
+    - key: page_size
+      value: "25"
+    - key: cursor
+      value: ""
+      disabled: true
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('HTTP 200',()=>pm.response.to.have.status(200));
+      pm.test('No raw sensitive fields',()=>{const t=pm.response.text();['latitude','longitude','photo_url','object_url'].forEach(k=>pm.expect(t.toLowerCase()).not.to.include(k));});
+    language: text/javascript
+order: 6000

@@ -1,0 +1,3 @@
+$kind: collection
+description: Imported canonical Attendance collection. Fase 7 changes conditional GPS behavior; endpoints unchanged.
+order: 1000

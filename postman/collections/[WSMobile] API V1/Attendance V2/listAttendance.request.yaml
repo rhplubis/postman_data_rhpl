@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{base_url}}/tunas/rental/wsattendance/listAttendance"
+method: POST
+body:
+  type: urlencoded
+  content:
+    ccode: "{{ccode}}"
+    appid: "{{appid}}"
+    token: "{{token}}"
+    date_from: "{{date_from}}"
+    date_to: "{{date_to}}"
+    page: "1"
+    page_size: "20"
+scripts:
+  - type: afterResponse
+    code: |-
+      const j=pm.response.json(); pm.test('code 200',()=>pm.expect(j.code).to.eql(200));
+      pm.test('items array',()=>pm.expect(j.data.items).to.be.an('array'));
+      if(j.data.items.length) pm.collectionVariables.set('attendance_key',j.data.items[0].attendance_key);
+    language: text/javascript
+order: 3000

@@ -1,0 +1,32 @@
+$kind: http-request
+url: "{{baseURL}}/absensiv2.2/tunas/rental/trans/showcuti/"
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: token
+      value: "17531549864830450"
+    - type: text
+      key: username
+      value: IOS123
+    - type: text
+      key: status_absen
+      value: "1"
+    - type: text
+      key: id
+      value: "479592"
+      disabled: true
+settings:
+  strictSSL: false
+order: 6000

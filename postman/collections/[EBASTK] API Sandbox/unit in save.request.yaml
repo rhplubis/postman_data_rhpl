@@ -1,0 +1,88 @@
+$kind: http-request
+url: https://ebastkdev.tunasgroup.com/tunas/rental/trans/UnitInSave
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: token
+      value: "17695666424714773"
+    - type: text
+      key: user_id
+      value: "1"
+    - type: text
+      key: vendor
+      value: BP TEST
+    - type: text
+      key: typeUnit
+      value: MOBIL
+    - type: text
+      key: jenisAsset
+      value: PASSENGER
+    - type: text
+      key: segmentUnit
+      value: SEDAN
+    - type: text
+      key: merkType
+      value: KIA CERATO 1.6 MT
+    - type: text
+      key: tahun
+      value: "000"
+    - type: text
+      key: stnkAtasNama
+      value: x
+    - type: text
+      key: noPolisi
+      value: X-0000-XXX
+    - type: text
+      key: kmTarik
+      value: "00"
+    - type: text
+      key: cabang
+      value: xxx
+    - type: text
+      key: noMesin
+      value: XXXX
+    - type: text
+      key: noRangka
+      value: XXX
+    - type: text
+      key: warna
+      value: xxx
+    - type: text
+      key: lokasiPool
+      value: BEKASI
+    - type: text
+      key: pool_id
+      value: BKS
+    - type: text
+      key: series_id
+      value: "2215"
+    - type: text
+      key: vendor_id
+      value: V24080000000003
+    - type: file
+      key: unit_in_img1
+      src: []
+    - type: file
+      key: unit_in_img2
+      src: []
+    - type: file
+      key: unit_in_img3
+      src: []
+    - type: file
+      key: unit_in_img4
+      src: []
+    - type: file
+      key: unit_in_img5
+      src: []
+    - type: file
+      key: unit_in_img6
+      src: []
+order: 42000

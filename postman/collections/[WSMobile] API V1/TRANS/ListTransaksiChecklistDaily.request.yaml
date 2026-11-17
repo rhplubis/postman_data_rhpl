@@ -1,0 +1,30 @@
+$kind: http-request
+url: "{{baseURL}}/absensiv2.2/tunas/rental/trans/ListTransaksiChecklistDaily/"
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: token
+      value: "17756171842305751"
+    - type: text
+      key: monthly_header_id
+      value: "1"
+      description: ambil dari session login username/NIK. mandatory
+    - type: text
+      key: check_date
+      value: 2026-04-01
+      description: periode jadi format tanggal sql. mandatory
+settings:
+  strictSSL: false
+order: 24000

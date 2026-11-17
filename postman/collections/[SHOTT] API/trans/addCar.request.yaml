@@ -1,0 +1,171 @@
+$kind: http-request
+description: |-
+  CANDIDATE/UNVERIFIED. Review business side effects before running. Mutation/upload risk: manual sandbox execution only.
+
+  Isi `ccode` dan `appid` dari collection variables. Gunakan data sandbox. Request mutation/upload harus dijalankan manual.
+url: "{{base_url}}/tunas/rental/trans/addCar"
+method: POST
+headers:
+  Accept: application/json
+body:
+  type: urlencoded
+  content:
+    - key: ccode
+      value: "{{ccode}}"
+      description: Wajib dari constructor controller; isi sebagai collection variable
+    - key: appid
+      value: "{{appid}}"
+      description: Wajib dari constructor controller; isi sebagai collection variable
+    - key: id_summary
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: type_trans
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: user_id
+      value: "{{user_id}}"
+      disabled: true
+      description: Optional/unverified
+    - key: package_id
+      value: ""
+      description: Required
+    - key: vehicle_id
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: total_quantity
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: username
+      value: "{{username}}"
+      description: Required
+    - key: token
+      value: "{{token}}"
+      disabled: true
+      description: Optional/unverified
+    - key: type_reservation
+      value: ""
+      description: Required
+    - key: is_out_town
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: out_town
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: out_town_charge
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: transfer_service
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: type_transfer_service
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: area
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: zone
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: airport
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: pickup_date
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: pickup_time
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: start_date
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: start_time
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: finish_date
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: finish_time
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: notes
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: location
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: location_detail
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: location_details
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: latitude
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: longitude
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: version
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: platform_type
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: email
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: mobile_phone
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: tells_about
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: delivery_method_value
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: area_delivery_value
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: charge_delivery_value
+      value: ""
+      disabled: true
+      description: Optional/unverified
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('HTTP bukan 500', function () { pm.expect(pm.response.code).not.to.eql(500); });
+      pm.test('Tidak ada stack trace PHP', function () { pm.expect(pm.response.text()).not.to.include('Stack trace:'); });
+      pm.test('Respons JSON untuk endpoint API', function () { pm.response.to.be.json; });
+    language: text/javascript
+order: 7000

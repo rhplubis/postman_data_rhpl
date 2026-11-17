@@ -1,0 +1,136 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/trans/UpdateTaksasi"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: token
+      value: "17617320462216411"
+    - type: text
+      key: transaction_id
+      value: "10"
+    - type: text
+      key: username
+      value: admin
+    - type: text
+      key: taksasi[1][bobot]
+      value: " 25"
+    - type: text
+      key: taksasi[1][kondisi]
+      value: "60"
+    - type: text
+      key: taksasi[1][est_penyesuaian]
+      value: " -10"
+    - type: text
+      key: taksasi[1][adjust]
+      value: " -2"
+    - type: text
+      key: taksasi[1][penyesuaian_nilai]
+      value: " 64.00"
+    - type: text
+      key: taksasi[2][bobot]
+      value: " 25"
+    - type: text
+      key: taksasi[2][kondisi]
+      value: " 80"
+    - type: text
+      key: taksasi[2][est_penyesuaian]
+      value: " -5"
+    - type: text
+      key: taksasi[2][adjust]
+      value: " -1.25"
+    - type: text
+      key: taksasi[2][penyesuaian_nilai]
+      value: " 64.00"
+    - type: text
+      key: taksasi[3][bobot]
+      value: " 25"
+    - type: text
+      key: taksasi[3][kondisi]
+      value: " 80"
+    - type: text
+      key: taksasi[3][est_penyesuaian]
+      value: " -5"
+    - type: text
+      key: taksasi[3][adjust]
+      value: " -1.25"
+    - type: text
+      key: taksasi[3][penyesuaian_nilai]
+      value: " 64.00"
+    - type: text
+      key: taksasi[4][bobot]
+      value: " 25"
+    - type: text
+      key: taksasi[4][kondisi]
+      value: " 80"
+    - type: text
+      key: taksasi[4][est_penyesuaian]
+      value: " -5"
+    - type: text
+      key: taksasi[4][adjust]
+      value: " -1.25"
+    - type: text
+      key: taksasi[4][penyesuaian_nilai]
+      value: " 64.00"
+    - type: text
+      key: taksasi[5][bobot]
+      value: " 25"
+    - type: text
+      key: taksasi[5][kondisi]
+      value: " 80"
+    - type: text
+      key: taksasi[5][est_penyesuaian]
+      value: " -5"
+    - type: text
+      key: taksasi[5][adjust]
+      value: " -1.25"
+    - type: text
+      key: taksasi[5][penyesuaian_nilai]
+      value: " 64.00"
+    - type: text
+      key: taksasi[6][bobot]
+      value: " 25"
+    - type: text
+      key: taksasi[6][kondisi]
+      value: " 80"
+    - type: text
+      key: taksasi[6][est_penyesuaian]
+      value: " -5"
+    - type: text
+      key: taksasi[6][adjust]
+      value: " -1.25"
+    - type: text
+      key: taksasi[6][penyesuaian_nilai]
+      value: " 64.00"
+    - type: text
+      key: taksasi[7][bobot]
+      value: " 25"
+    - type: text
+      key: taksasi[7][kondisi]
+      value: " 80"
+    - type: text
+      key: taksasi[7][est_penyesuaian]
+      value: " -5"
+    - type: text
+      key: taksasi[7][adjust]
+      value: " -1.25"
+    - type: text
+      key: taksasi[7][penyesuaian_nilai]
+      value: " 64.00"
+    - type: text
+      key: harga_pasar
+      value: " 70000000"
+    - type: text
+      key: total_adjust
+      value: " 20"
+    - type: text
+      key: total_penyesuaian_nilai
+      value: "57500000"
+order: 27000

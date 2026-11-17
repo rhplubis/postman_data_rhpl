@@ -1,0 +1,23 @@
+$kind: http-request
+description: "KANDIDAT STATIS; belum dikonfirmasi sebagai route client atau verb. POST/form hanya hipotesis dari parser. Jangan jalankan sampai sandbox_host, izin, fixture sintetis dan rollback disetujui. Side effect: potensial DB/session/storage/integrasi; wajib driver_allow_mutation=YES. Field mandatory menurut source: appid, driver_id, driver_name, driver_phone, token. Jangan simpan token/PIN/data nyata dalam collection, environment export, history, atau dokumen."
+url: "{{base_url}}/tunas/rental/account/updateProfile"
+method: POST
+body:
+  type: urlencoded
+  content:
+    - key: appid
+      value: "{{appid}}"
+    - key: ccode
+      value: "{{ccode}}"
+    - key: driver_id
+      value: "{{driver_id}}"
+    - key: driver_name
+      value: "{{driver_name}}"
+    - key: driver_phone
+      value: "{{driver_phone}}"
+    - key: lang
+      value: "{{lang}}"
+      disabled: true
+    - key: token
+      value: "{{token}}"
+order: 4000

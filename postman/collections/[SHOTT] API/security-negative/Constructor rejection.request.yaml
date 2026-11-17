@@ -1,0 +1,7 @@
+$kind: http-request
+description: Negative route test. Non-mutating.
+url: "{{base_url}}/tunas/rental/application/__construct"
+method: GET
+headers:
+  Accept: application/json
+order: 2000

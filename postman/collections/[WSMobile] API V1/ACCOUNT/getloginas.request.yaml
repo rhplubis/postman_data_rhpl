@@ -1,0 +1,27 @@
+$kind: http-request
+url: "{{baseURL}}/absensiv2.2/tunas/rental/account/getloginas/"
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: token
+      value: "17624909134128315"
+      disabled: true
+    - type: text
+      key: password
+      value: password
+      disabled: true
+settings:
+  strictSSL: false
+order: 4000

@@ -1,0 +1,37 @@
+$kind: http-request
+url: "{{base_url}}/tunas/rental/wsattendance/createVerificationChallenge"
+method: POST
+body:
+  type: urlencoded
+  content:
+    - key: ccode
+      value: "{{ccode}}"
+    - key: appid
+      value: "{{appid}}"
+    - key: token
+      value: "{{token}}"
+    - key: request_id
+      value: "{{request_id}}"
+    - key: device_id
+      value: "{{device_id}}"
+    - key: app_version
+      value: "{{app_version}}"
+    - key: platform
+      value: "{{platform}}"
+    - key: action
+      value: "{{action}}"
+      description: CLOCK_IN/CLOCK_OUT
+scripts:
+  - type: beforeRequest
+    code: "pm.variables.set('request_id', pm.variables.replaceIn('{{$guid}}')); "
+    language: text/javascript
+  - type: afterResponse
+    code: |-
+      const j=pm.response.json();
+      pm.test('code 200',()=>pm.expect(j.code).to.eql(200));
+      pm.test('challenge UUID',()=>pm.expect(j.data.challenge_id).to.match(/^[0-9a-f-]{36}$/));
+      pm.test('nonce returned',()=>pm.expect(j.data.nonce).to.be.a('string').and.not.empty);
+      pm.collectionVariables.set('challenge_id',j.data.challenge_id);
+      pm.collectionVariables.set('nonce',j.data.nonce);
+    language: text/javascript
+order: 6000

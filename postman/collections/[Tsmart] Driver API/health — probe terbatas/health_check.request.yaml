@@ -1,0 +1,5 @@
+$kind: http-request
+description: 'Smoke lokal non-mutasi sudah diverifikasi: GET dan POST /tunas/rental/health/health_check menghasilkan HTTP 200 dan body {"status":"connected","code":200}. Header saat ini text/html. Endpoint ini membuktikan bootstrap/routing, bukan koneksi DB atau autentikasi. Remote sandbox dan parity client tetap NOT RUN. Guard per-request tetap wajib; jangan simpan credentials atau respons sensitif.'
+url: "{{base_url}}/tunas/rental/health/health_check"
+method: GET
+order: 1000

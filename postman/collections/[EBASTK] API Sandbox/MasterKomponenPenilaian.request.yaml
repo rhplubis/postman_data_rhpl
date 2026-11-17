@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/trans/MasterKomponenPenilaian"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: token
+      value: "17613001423677358"
+    - type: text
+      key: category
+      value: RD4
+      description: wajib
+order: 21000

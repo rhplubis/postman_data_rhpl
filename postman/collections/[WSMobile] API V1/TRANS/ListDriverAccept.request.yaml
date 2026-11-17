@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{baseURL}}/absensiv2.2/tunas/rental/trans/ListDriverAccept/"
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: token
+      value: "17531761516874085"
+    - type: text
+      key: korlap_id
+      value: admin_korlap
+settings:
+  strictSSL: false
+order: 16000

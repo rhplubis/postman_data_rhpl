@@ -1,0 +1,3 @@
+$kind: collection
+description: Semua request manual; Collection Runner/Newman tidak untuk batch mutasi. Konfirmasi setiap aksi terhadap client nyata.
+order: 5000

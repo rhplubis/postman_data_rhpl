@@ -1,0 +1,81 @@
+$kind: http-request
+url: "{{baseURL}}/absensiv2.2/tunas/rental/trans/abseninnew"
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: token
+      value: "17531549864830450"
+    - type: text
+      key: username
+      value: IOS123
+    - type: text
+      key: lattitude
+      value: "-6.277460417121513"
+    - type: text
+      key: longitude
+      value: "106.72158579638268"
+    - type: text
+      key: location
+      value: Bintaro Komersial CBD B7 Kav.A1/02, Pd. Jaya, Kec. Pd. Aren, Kota Tangerang Selatan, Banten 15224
+    - type: text
+      key: time_device
+      value: 2025-07-22 10:40:11
+    - type: text
+      key: device_id
+      value: adjaskduq3903r4823904892askdjakjd
+    - type: text
+      key: date
+      value: 2025-07-22
+    - type: text
+      key: time
+      value: 10:40:11
+    - type: text
+      key: status_absen
+      value: "1"
+      description: 1 = masuk , 2 = out
+    - type: file
+      key: filename
+      src:
+        - postman-cloud:///1ef47ec7-cd40-4b60-901e-6f025f48c8f5
+    - type: text
+      key: time_in
+      value: 10:40:11
+    - type: text
+      key: lembur
+      value: "0"
+    - type: text
+      key: manufacturer
+      value: Xiamoi Pad
+    - type: text
+      key: android
+      value: "14.4"
+    - type: text
+      key: apk
+      value: "1.0"
+    - type: text
+      key: lembur_start
+      value: 00:00:00
+    - type: text
+      key: lembur_finish
+      value: 00:00:00
+    - type: text
+      key: is_out_of_town
+      value: "0"
+    - type: text
+      key: jamkerjapagi
+      value: 10:00
+settings:
+  strictSSL: false
+order: 1000

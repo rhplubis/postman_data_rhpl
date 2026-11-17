@@ -1,0 +1,26 @@
+$kind: http-request
+description: "KANDIDAT STATIS; belum dikonfirmasi sebagai route client atau verb. POST/form hanya hipotesis dari parser. Jangan jalankan sampai sandbox_host, izin, fixture sintetis dan rollback disetujui. Side effect: potensial DB/session/storage/integrasi; wajib driver_allow_mutation=YES. Field mandatory menurut source: appid, km, pin, timelogin, timelogout. Jangan simpan token/PIN/data nyata dalam collection, environment export, history, atau dokumen. PENTING: signin bukan read-only; source dapat mencatat absensi dan membuat session/token. Owner menjalankan dengan akun sintetis dan fixture yang disetujui; jangan gunakan akun produksi."
+url: "{{base_url}}/tunas/rental/account/signin"
+method: POST
+body:
+  type: urlencoded
+  content:
+    - key: appid
+      value: "{{appid}}"
+    - key: ccode
+      value: "{{ccode}}"
+    - key: imei
+      value: "{{imei}}"
+      disabled: true
+    - key: km
+      value: "{{km}}"
+    - key: lang
+      value: "{{lang}}"
+      disabled: true
+    - key: pin
+      value: "{{pin}}"
+    - key: timelogin
+      value: "{{timelogin}}"
+    - key: timelogout
+      value: "{{timelogout}}"
+order: 1000

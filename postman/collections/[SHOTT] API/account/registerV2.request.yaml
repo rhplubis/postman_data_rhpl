@@ -1,0 +1,98 @@
+$kind: http-request
+description: |-
+  CANDIDATE/UNVERIFIED. Review business side effects before running. Mutation/upload risk: manual sandbox execution only.
+
+  Isi `ccode` dan `appid` dari collection variables. Gunakan data sandbox. Request mutation/upload harus dijalankan manual.
+url: "{{base_url}}/tunas/rental/account/registerV2"
+method: POST
+headers:
+  Accept: application/json
+body:
+  type: urlencoded
+  content:
+    - key: ccode
+      value: "{{ccode}}"
+      description: Wajib dari constructor controller; isi sebagai collection variable
+    - key: appid
+      value: "{{appid}}"
+      description: Wajib dari constructor controller; isi sebagai collection variable
+    - key: token_register
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: username
+      value: "{{username}}"
+      disabled: true
+      description: Optional/unverified
+    - key: password_register
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: fullname
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: nip
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: position
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: no_ktp
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: no_npwp
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: address
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: company_name
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: company_tunas_group
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: email_address
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: phone_number
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: id_card
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: name_card
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: type_account
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: device
+      value: ""
+      disabled: true
+      description: Optional/unverified
+    - key: register_type
+      value: ""
+      disabled: true
+      description: Optional/unverified
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('HTTP bukan 500', function () { pm.expect(pm.response.code).not.to.eql(500); });
+      pm.test('Tidak ada stack trace PHP', function () { pm.expect(pm.response.text()).not.to.include('Stack trace:'); });
+      pm.test('Respons JSON untuk endpoint API', function () { pm.response.to.be.json; });
+    language: text/javascript
+order: 4000

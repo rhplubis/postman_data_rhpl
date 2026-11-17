@@ -1,0 +1,36 @@
+$kind: http-request
+url: http://localhost:81/mas-auction-ebastk-api/tunas/rental/trans/deletephotos3
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: token
+      value: "17660420061654141"
+    - type: text
+      key: type_unit
+      value: RD4
+      disabled: true
+    - type: text
+      key: category_id
+      value: PASSENGER
+      disabled: true
+    - type: text
+      key: segment_id
+      value: SUV/MPV
+      disabled: true
+    - type: file
+      key: filename
+      src:
+        - /C:/Users/Administrator/Downloads/djkn2.png
+      disabled: true
+    - type: text
+      key: url
+      value: https://tunasauction.s3.ap-southeast-1.amazonaws.com/bastk_new/05d6813c065cd82e1fc18ea8f1e8ddae_789884830.jpg
+order: 40000

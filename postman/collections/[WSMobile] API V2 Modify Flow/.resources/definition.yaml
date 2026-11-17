@@ -1,0 +1,55 @@
+$kind: collection
+description: "Consolidated collection. Implemented: Fase 1 Attendance, Fase 2 Overtime, Fase 5 Notification, Fase 7 Geofence via Attendance, Fase 8 Dashboard. Fase 3 HOLD, Fase 4 REQUIREMENT_OPEN, Fase 6 BLOCKED: no executable requests. Fill variables locally; never commit real tokens/credentials. Dashboard E2E pending."
+variables:
+  base_url: http://localhost:81
+  ccode: ""
+  appid: ""
+  token: ""
+  date_from: 2026-09-03
+  date_to: 2026-09-03
+  attendance_key: V2:1
+  device_id: ""
+  app_version: ""
+  platform: ANDROID
+  action: CLOCK_IN
+  photo_path: D:/MAP/WSMOBILE/RESTRUKTUR FLOW ABSENSI/FOTO TEST/absensi1_720x960.jpg
+  photo_sha256: ""
+  latitude: "-6.3000000"
+  longitude: "106.7000000"
+  gps_accuracy_m: "10"
+  os_version: "14"
+  device_model: Xiaomi Pad 6
+  camera_position: FRONT
+  timezone_offset_minutes: "420"
+  location_captured_at: ""
+  location_provider: FUSED
+  network_type: WIFI
+  integrity_token: POSTMAN-UAT-PLACEHOLDER
+  integrity_provider: PLAY_INTEGRITY
+  challenge_actions: ""
+  challenge_started_at: ""
+  challenge_completed_at: ""
+  liveness_reason_code: ""
+  base_photo_reason: INITIAL_ENROLLMENT
+  base_photo_path: D:/MAP/WSMOBILE/RESTRUKTUR FLOW ABSENSI/FOTO TEST/base_photo_720x960.jpg
+  base_photo_sha256: ""
+  base_photo_request_id: ""
+  base_photo_version: ""
+  worker_token: ""
+  pic_token: ""
+  request_id: ""
+  overtime_uuid: ""
+  row_version: "1"
+  approval_overtime_uuid: ""
+  approval_row_version: "1"
+  source_overtime_uuid: ""
+  source_row_version: "1"
+  attachment_id: ""
+  overtime_date: 2026-08-27
+  start_at: 2026-08-27T17:00:00+07:00
+  end_at: 2026-08-27T19:00:00+07:00
+  reason: Pekerjaan tambahan operasional
+  korlap_token: ""
+  fcm_token: ""
+  notification_uuid: ""
+  business_date: 2026-09-03

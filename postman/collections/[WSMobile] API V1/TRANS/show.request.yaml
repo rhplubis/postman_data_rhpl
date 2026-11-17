@@ -1,0 +1,28 @@
+$kind: http-request
+url: https://tsmart-api-drv.tunasgroup.com/api/absensiv2.2/tunas/rental/trans/show/
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: token
+      value: "17624909134128315"
+    - type: text
+      key: username
+      value: IOS123
+    - type: text
+      key: status_absen
+      value: "1"
+settings:
+  strictSSL: false
+order: 3000

@@ -1,0 +1,28 @@
+$kind: http-request
+url: "{{UrlSandboxEbastk}}/tunas/rental/trans/warehouse"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+    - type: text
+      key: appid
+      value: "1139287642"
+    - type: text
+      key: token
+      value: "17575629069582535"
+    - type: text
+      key: username
+      value: dispatcher
+    - type: text
+      key: nopol
+      value: B-8152-EQ
+    - type: text
+      key: pool
+      value: BKS
+    - type: text
+      key: vhc_cat_name
+      value: MBL
+order: 7000

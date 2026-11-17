@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{base_url}}/tunas/rental/wsattendance/getAttendanceDetail"
+method: POST
+headers:
+  - key: X-Request-ID
+    value: "{{$guid}}"
+    description: "Phase 01 correlation ID. Write endpoint: must equal body request_id."
+body:
+  type: urlencoded
+  content:
+    ccode: "{{ccode}}"
+    appid: "{{appid}}"
+    token: "{{token}}"
+    attendance_key: "{{attendance_key}}"
+scripts:
+  - type: afterResponse
+    code: |-
+      const j=pm.response.json(); pm.test('code 200',()=>pm.expect(j.code).to.eql(200));
+      pm.test('matching key',()=>pm.expect(j.data.attendance_key).to.eql(pm.collectionVariables.get('attendance_key')));
+    language: text/javascript
+order: 4000

@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{base_url}}/tunas/rental/wsattendance/commitRecordTime"
+method: POST
+body:
+  type: urlencoded
+  content:
+    ccode: "{{ccode}}"
+    appid: "{{appid}}"
+    token: "{{token}}"
+    request_id: "{{commit_request_id}}"
+    attempt_token: "{{attempt_token}}"
+scripts:
+  - type: beforeRequest
+    code: "pm.variables.set('commit_request_id', pm.variables.replaceIn('{{$guid}}')); "
+    language: text/javascript
+  - type: afterResponse
+    code: |-
+      const j=pm.response.json();
+      pm.test('code 200',()=>pm.expect(j.code).to.eql(200));
+      pm.test('committed action',()=>pm.expect(['CLOCK_IN','CLOCK_OUT']).to.include(j.data.committed_action));
+      pm.collectionVariables.set('attendance_key','V2:'+j.data.attendance_id);
+    language: text/javascript
+order: 7000

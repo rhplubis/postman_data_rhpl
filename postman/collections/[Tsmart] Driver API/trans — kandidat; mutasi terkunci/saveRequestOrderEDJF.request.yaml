@@ -1,0 +1,77 @@
+$kind: http-request
+description: "KANDIDAT STATIS; belum dikonfirmasi sebagai route client atau verb. POST/form hanya hipotesis dari parser. Jangan jalankan sampai sandbox_host, izin, fixture sintetis dan rollback disetujui. Side effect: potensial DB/session/storage/integrasi; wajib driver_allow_mutation=YES. Field mandatory menurut source: appid, branch_code, cust_id, destination, driver, meet_place, onlocation, pass_id, pass_in, pass_out, pool_id, tot_pass, vhc_id. Jangan simpan token/PIN/data nyata dalam collection, environment export, history, atau dokumen."
+url: "{{base_url}}/tunas/rental/trans/saveRequestOrderEDJF"
+method: POST
+body:
+  type: urlencoded
+  content:
+    - key: appid
+      value: "{{appid}}"
+    - key: branch_code
+      value: "{{branch_code}}"
+    - key: branch_name
+      value: "{{branch_name}}"
+      disabled: true
+    - key: ccode
+      value: "{{ccode}}"
+    - key: cust_id
+      value: "{{cust_id}}"
+    - key: destination
+      value: "{{destination}}"
+    - key: driver
+      value: "{{driver_id}}"
+    - key: email
+      value: "{{email}}"
+      disabled: true
+    - key: exp_other
+      value: "{{exp_other}}"
+    - key: exp_parkir
+      value: "{{exp_parkir}}"
+    - key: exp_toll
+      value: "{{exp_toll}}"
+    - key: km_end
+      value: "{{km_end}}"
+    - key: km_start
+      value: "{{km_start}}"
+    - key: lang
+      value: "{{lang}}"
+      disabled: true
+    - key: meet_place
+      value: "{{meet_place}}"
+    - key: onlocation
+      value: "{{onlocation}}"
+    - key: pass_id
+      value: "{{pass_id}}"
+    - key: pass_in
+      value: "{{pass_in}}"
+    - key: pass_name
+      value: "{{pass_name}}"
+    - key: pass_out
+      value: "{{pass_out}}"
+    - key: phone_number
+      value: "{{phone_number}}"
+    - key: pool_id
+      value: "{{pool_id}}"
+    - key: purpose_trip
+      value: "{{purpose_trip}}"
+    - key: remark
+      value: "{{remark}}"
+    - key: token
+      value: "{{token}}"
+    - key: tot_exp
+      value: "{{tot_exp}}"
+    - key: tot_pass
+      value: "{{tot_pass}}"
+    - key: url_other
+      value: "{{url_other}}"
+    - key: url_parkir
+      value: "{{url_parkir}}"
+    - key: url_toll
+      value: "{{url_toll}}"
+    - key: vhc_gs
+      value: "{{vhc_gs}}"
+    - key: vhc_id
+      value: "{{vhc_id}}"
+    - key: vhc_type_id
+      value: "{{vhc_type_id}}"
+order: 45000

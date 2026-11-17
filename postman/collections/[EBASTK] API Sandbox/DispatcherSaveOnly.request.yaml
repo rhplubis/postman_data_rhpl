@@ -1,0 +1,33 @@
+$kind: http-request
+url: http://localhost:81/mas-auction-ebastk-api/tunas/rental/trans/DispatcherSaveOnly
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: ccode
+      value: MAS
+      disabled: true
+    - type: text
+      key: appid
+      value: "1139287642"
+      disabled: true
+    - type: text
+      key: token
+      value: "1764141405430125"
+      disabled: true
+    - type: text
+      key: type_unit
+      value: RD4
+      disabled: true
+    - type: text
+      key: category_id
+      value: PASSENGER
+    - type: text
+      key: segment_id
+      value: SUV/MPV
+    - type: text
+      key: merk_type
+      value: CHER
+      disabled: true
+order: 37000

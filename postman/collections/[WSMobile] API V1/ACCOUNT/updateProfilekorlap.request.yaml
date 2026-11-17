@@ -1,0 +1,37 @@
+$kind: http-request
+url: "{{baseURL}}/absensiv2.2/tunas/rental/account/updateProfilekorlap/"
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: token
+      value: "17528314166674785"
+    - type: text
+      key: korlap_id
+      value: admin_korlap
+    - type: text
+      key: korlap_name
+      value: Rahmat Lubis
+    - type: text
+      key: korlap_phone
+      value: "08463737373"
+    - type: text
+      key: korlap_email
+      value: mm@gm.com
+    - type: text
+      key: korlap_address
+      value: JAKARTA
+settings:
+  strictSSL: false
+order: 15000

@@ -1,0 +1,40 @@
+$kind: http-request
+url: "{{baseURL}}/absensiv2.2/tunas/rental/account/updateProfile/"
+method: POST
+queryParams:
+  - key: ""
+    value: null
+    disabled: true
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: token
+      value: "17528310733821713"
+    - type: text
+      key: username
+      value: IOS123
+    - type: text
+      key: full_name
+      value: Rahmat Lubis
+    - type: text
+      key: no_hp
+      value: "081238488484"
+    - type: text
+      key: email
+      value: a@gm.com
+    - type: text
+      key: address
+      value: JAKARTA
+    - type: text
+      key: status_absen
+      value: "1"
+settings:
+  strictSSL: false
+order: 11000

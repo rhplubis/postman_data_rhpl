@@ -1,0 +1,22 @@
+$kind: http-request
+url: https://tsmart-api-drv.tunasgroup.com/api/absensiv2.2/tunas/rental/trans/listChecklistActivityKorlap
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: appid
+      value: "1948346196"
+    - type: text
+      key: ccode
+      value: MAP
+    - type: text
+      key: token
+      value: "17797026709304522"
+    - type: text
+      key: category
+      value: HOUSEKEEPING
+    - type: text
+      key: username
+      value: admin_korlap
+order: 28000
